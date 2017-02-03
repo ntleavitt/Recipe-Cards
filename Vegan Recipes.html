@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Buck's Life</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="style/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Atomic+Age" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+</head>
+<body ng-app="buckApp">
+	<div class="jumbotron">
+	  <h1>Vegan Eats</h1>  
+	</div>
+	<div class="nav" ng-controller="navController">
+		<ul>
+			<li ng-class="{'active': isActive('/')}"><a href="#/">Home</a></li>
+			<li ng-class="{'active': isActive('/blog')}"><a href="#/blog">Blog</a></li>
+			<li ng-class="{'active': isActive('/about')}"><a href="#/about">About</a><li>
+			<li ng-class="{'active': isActive('/donate')}" style="float: right"><a href="#/donate">Donate</a><li>
+		</ul>
+	</div>
+	<div class="ng-view" style="height:100%">
+	</div>
+	
+	<footer class="footer">
+			<p>"Mighty Buck", by: Nate<p>
+	</footer>
+	
+	<script src="scripts/route.js"></script>
+</body>
+</html>
